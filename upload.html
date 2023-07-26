@@ -1,0 +1,47 @@
+<html>
+<title> Image Processing </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+<body>
+<center>
+
+<br>
+<h1>Image Processing</h1><hr>
+<form method="post" action="/" enctype="multipart/form-data"><br><br>
+    <h2>Select an Image for Rotating</h2>
+
+    <!-- Input tag to take the image file -->
+    <div class="form-group">
+        <label for="file">Choose an image:</label>
+        <input type="file" class="form-control-file" id="file" name="file"><br>
+    </div>
+
+    <!-- Input tag to get the degree of rotation -->
+    <div class="form-group">
+        <label for="text">Degree to rotate:</label>
+        <input type="text" class="form-control" id="text" name="text" placeholder="Degree to rotate"><br>
+    </div>
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary">Submit</button><br><br>
+
+    <!-- Display the rotated image -->
+    <img src="{{ url_for('display_image', filename=filename) }}">
+</form>
+
+
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
